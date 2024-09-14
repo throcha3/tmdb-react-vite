@@ -27,7 +27,7 @@ const Home = () => {
 			<div className="movies-container">
 				{topMovies.length === 0 && <p>Loading...</p>}
 				{topMovies.length > 0 &&
-					topMovies.map((movie) => <MovieCard movie={movie} />)}
+					topMovies.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
 			</div>
 		</div>
 	);
