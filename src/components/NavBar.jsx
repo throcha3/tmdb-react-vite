@@ -10,7 +10,11 @@ const NavBar = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(search);
+
+		if (!search) return;
+
+		navigate(`/search?q=${search}`, { replace: true });
+		setSearch("");
 	};
 	return (
 		<nav id="navbar">
